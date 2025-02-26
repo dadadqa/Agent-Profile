@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSIFIED - Agent Specter Liu</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #00ffcc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ffcc;
+        }
+        .glitch {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: glitch 1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            100% { text-shadow: -2px -2px blue; }
+        }
+        .access-button {
+            background-color: #00ffcc;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .access-button:hover {
+            background-color: #008f73;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function grantAccess() {
+            document.getElementById('access-screen').classList.add('hidden');
+            document.getElementById('profile-content').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div id="access-screen" class="container">
+        <h1 class="glitch">ACCESS DENIED</h1>
+        <p>Security Clearance Required.</p>
+        <button class="access-button" onclick="grantAccess()">Override Security</button>
+    </div>
+    
+    <div id="profile-content" class="container hidden">
+        <h1>🔒 CLASSIFIED FILE 🔒</h1>
+        <p><strong>AGENT CODE:</strong> Specter Liu</p>
+        <p><strong>STATUS:</strong> Active Undercover</p>
+        <p><strong>CLEARANCE LEVEL:</strong> Level 15 Access Only</p>
+        <p><strong>LAST MISSION:</strong> OPERATION NIGHTFALL</p>
+        <p><strong>LOCATION:</strong> CLASSIFIED</p>
+        <p><strong>SKILLS:</strong> Combat & Espionage</p>
+        <p><strong>SECRET MESSAGE:</strong> ██ ██████ ████ █████ ██ ████</p>
+    </div>
+</body>
+</html>
